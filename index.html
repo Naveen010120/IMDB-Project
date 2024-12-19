@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register</title>
+    <link rel="stylesheet" href="./validation.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="regName">Name</label>
+            <input type="text" id="regName" placeholder="Enter your name" required>
+            <label for="regEmail">Email</label>
+            <input type="email" id="regEmail" placeholder="Enter your email" required>
+            <label for="regPassword">Password</label>
+            <input type="password" id="regPassword" placeholder="Enter your password" required>
+            <button type="submit">Register</button>
+        </form>
+        <div class="toggle">
+            Already have an account? <a id="showLogin">Login here</a>
+        </div>
+    </div>
+
+    <div class="container" id="loginContainer" style="display: none;">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+            <button type="submit" id="loginbtn">Login</button>
+        </form>
+        <div class="toggle">
+            Don't have an account? <a id="showRegister">Register here</a>
+        </div>
+    </div>
+    <script src="./validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .movie{
+            margin-left: 10vw;
+            margin-top: 10vh;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="logo">IMDb</div>
+        </div>
+        <a href="./contact.html">Contact Us</a>
+    </header>
+    <main id="main">
+
+    </main>
+    <script>
+        let main = document.getElementById('main')
+        document.addEventListener('DOMContentLoaded', () => {
+            let stored = JSON.parse(localStorage.getItem('wishlistData'));
+            stored.forEach(ele => {
+                let div = document.createElement('div');
+                div.classList.add("movie");
+                div.innerHTML = `
+                <img src="${ele.image}" alt=""/>
+    
+                    <div class="movie-info">
+                    <h3>${ele.heading}</h3>
+                        <span class="rating">${ele.rating}</span>
+                    </div> `
+                main.append(div);
+            })
+        })
+    </script>
+</body>
+
+</html>

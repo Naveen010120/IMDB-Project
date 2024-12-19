@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+        }
+
+        .form-container {
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            padding-left: 40px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group i {
+            position: absolute;
+            left: 10px;
+            top: 59%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        .form-group textarea {
+            resize: none;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #6a11cb;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .btn:hover {
+            background: #2575fc;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 15px;
+                margin: 0 10px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding-left: 35px;
+            }
+
+            .btn {
+                font-size: 14px;
+            }
+
+            .form-container h2 {
+                font-size: 20px;
+            }
+
+            .message {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <i class="fas fa-phone"></i>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="issues">Issues</label>
+            <i class="fas fa-exclamation-circle"></i>
+            <textarea id="issues" name="issues" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+    <div class="message" id="message"></div>
+</div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+        const issues = document.getElementById('issues').value;
+
+        // Save to local storage
+        const formData = { name, phone, email, issues };
+        localStorage.setItem('contactFormData', JSON.stringify(formData));
+
+        // Display confirmation message
+        window.open("./backsoon.html",'_self');
+
+        // Clear the form
+        document.getElementById('contactForm').reset();
+    });
+</script>
+
+</body>
+</html>

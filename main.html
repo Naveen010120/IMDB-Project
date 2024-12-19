@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="logo">IMDb</div>
+        </div>
+
+        <form id="form">
+            <input type="text" autocomplete="off" id="search" placeholder="Search" class="search">
+        </form>
+        <a href="./wishlist.html" id="wishlist">Wishlist<sup id="val">0</sup></a>
+        <a href="./contact.html">Contact Us</a>
+    </header>
+    
+
+        <div class="carousel-container" id="slide">
+            <!-- Carousel track -->
+            <div class="carousel-track">
+                <!-- Video 1 -->
+                <video class="carousel-item" autoplay muted loop playsinline>
+                    <source src="./videoplayback.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Video 2 -->
+                <video class="carousel-item" autoplay muted loop playsinline>
+                    <source src="./The Avengers - _I'm Always Angry_ - Hulk SMASH Scene - Movie CLIP HD.mp4"
+                        type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Video 3 -->
+                <video class="carousel-item" autoplay muted loop playsinline>
+                    <source src="./shinchan.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Dots for navigation -->
+            <div class="carousel-dots">
+                <div class="dot active" data-index="0"></div>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+            </div>
+        </div>
+    
+
+
+
+    <h1 style="color: aliceblue; margin-left: 10vw;" id="heading">Trending Movies</h1>
+    <main id="main">
+
+    </main>
+    <h1 style="color: aliceblue; margin-left: 10vw;" id="heading1">Top 10 Movies</h1>
+
+    <main id="main1">
+
+    </main>
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="social-links">
+                <p>Follow IMDb on social</p>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <div class="app-links">
+                <p>Get the IMDb app</p>
+
+                <p>For Android and iOS</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Help</a>
+                <a href="#">Site Index</a>
+                <a href="#">IMDbPro</a>
+                <a href="#">Box Office Mojo</a>
+                <a href="#">License IMDb Data</a>
+                <a href="#">Press Room</a>
+                <a href="#">Advertising</a>
+                <a href="#">Jobs</a>
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Your Ads Privacy Choices</a>
+            </div>
+
+            <div class="company-info">
+                <p>© 1990-2024 by IMDb.com, Inc.</p>
+                <p>An <span class="amazon-logo">Amazon</span> company</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- js here -->
+    <script src="app.js"></script>
+</body>
+
+</html>

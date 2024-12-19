@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #121212;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #121212;
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    background-color: #f5c518;
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+header a {
+    color: #a9a9a9;
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-left: 1vw;
+    padding-top: 10px;
+}
+
+.search {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    width: 50vw;
+    border: 2px solid #22254b;
+    background-color: transparent;
+    font-family: inherit;
+    color: #eee;
+    font-size: 1rem;
+}
+
+.search::placeholder {
+    color: #afb2dc;
+}
+
+.search:focus {
+    outline: none;
+    background-color: #05082c;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    width: 300px;
+    background-color: #0d1dd2;
+    margin: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    color: #eee;
+    letter-spacing: 0.5px;
+    align-items: center;
+}
+
+.movie-info h3 {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.movie-info span {
+    background-color: #22254b;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.green {
+    color: rgb(46, 194, 46);
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+.overview {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 1;
+    color: #eee;
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 1s ease-in;
+    max-width: 100%;
+    overflow: auto;
+}
+i{
+    font-size: 1.9rem;
+    color: #fff;
+    float: right;
+}
+.btn{
+    background: none;
+    border: none;
+}
+button:focus-within i{
+   color: #ff6347;
+   /* background-color: #ff6347; */
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+.overview h4 {
+    margin-top: 0;
+}
+i{
+    cursor: pointer;
+}
+i:hover{
+    color:#ff6347;
+    font-size: 3rem;
+}
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links,
+.app-links,
+.footer-links,
+.company-info {
+    margin-bottom: 20px;
+}
+
+.social-links p,
+.app-links p {
+    font-weight: bold;
+}
+
+.icons a {
+    margin: 0 5px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.app-links img {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.company-info .amazon-logo {
+    font-style: italic;
+}
+
+.movie-video-section {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #121212;
+    color: #eee;
+}
+
+.movie-video-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #eee;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 50vh;
+    margin: 0 auto;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Carousel container styling */
+.carousel-container {
+    width: 80vw;
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Carousel track styling */
+.carousel-track {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+/* Video styling */
+.carousel-item {
+    flex: 0 0 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+/* Dots navigation */
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #ff6347;
+    opacity: 1;
+}
+main {
+    display: flex;
+    flex-wrap: nowrap;               /* Use flexbox for horizontal alignment */
+    overflow-x: auto;                /* Enable horizontal scrolling */
+    overflow-y: hidden;              /* Disable vertical scrolling */
+    white-space: nowrap;             /* Prevent wrapping of child elements */
+    scroll-behavior: smooth;         /* Optional: Smooth scrolling effect */
+    gap: 16px;                       /* Space between the movie divs */
+    padding: 10px;
+    -ms-overflow-style: none;         /* Hide scrollbar in IE */
+    scrollbar-width: none;            /* Hide scrollbar in Firefox */
+    justify-content: flex-start;     /* Align children to the left */
+    align-items: center;             /* Vertically center the content */
+}
+
+
+main::-webkit-scrollbar {
+    display: none;                   /* Hides the scrollbar for WebKit-based browsers (Chrome, Safari, etc.) */
+}
+
+#main div {
+    min-width: 250px;    
+    max-width: 250px;             /* Ensure each movie div has a minimum width */
+    box-sizing: border-box;          /* Prevent overflow due to padding or border */
+}
+#main1 div {
+    min-width: 250px;                 /* Ensure each movie div has a minimum width */
+    box-sizing: border-box;          /* Prevent overflow due to padding or border */
+}
+
+.movie {
+    /* Additional styling for movie container */
+    box-sizing: border-box;
+}
+
+.overview {
+    overflow-x: hidden; /* Disables horizontal scrolling */
+    overflow-y: auto;   /* Enables vertical scrolling if needed */
+}
+
+.overview p {
+    width: 100%;         /* Allows full content to show */
+    white-space: normal; /* Enables line wrapping */
+    word-wrap: break-word; /* Handles long words gracefully */
+}
+
+/* Optional: Fixes for centering or padding adjustments in mobile */
+@media (max-width: 768px) {
+    main {
+        padding: 10px 5px;  /* Adjust padding if necessary */
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .search {
+        width: 70vw;
+        font-size: 0.9rem;
+    }
+
+    .movie {
+        width: 90%;
+    }
+
+    .movie-video-section {
+        padding: 10px;
+    }
+
+    .video-container {
+        width: 95%;
+        height: 40vh;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header a {
+        margin: 10px 0;
+        font-size: 1.1rem;
+    }
+
+    .logo {
+        background-color: #f5c518;
+        color: black;
+        border-radius: 10px;
+        font-weight: bold;
+        max-width: 80px;
+        padding: 5px 10px;
+        margin-right: 20px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search {
+        width: 50vw;
+        font-size: 0.8rem;
+    }
+
+    header a {
+        display: none;
+    }
+
+    .logo {
+        background-color: #f5c518;
+        color: black;
+        border-radius: 10px;
+        font-weight: bold;
+        max-width: 80px;
+        font-size: 16px;
+    }
+
+    .video-container {
+        width: 100%;
+        height: 35vh;
+    }
+
+    .carousel-container {
+        width: 80vw;
+        height: 40vh;
+    }
+
+   
+    .carousel-item {
+        flex: 0 0 100%;
+        height: 50vh;
+        max-width: 105%;
+        object-fit: cover;
+    }
+    .carousel-container {
+        width: 80vw;
+        height: 50vh;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+
+    }
+    .video-container video {
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}
